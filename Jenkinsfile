@@ -6,6 +6,7 @@ pipeline {
          steps {
             // sh 'pip install -r requirements.txt'
             sh 'echo JAVA_HOME'
+            sh 'pytest'
          }
       }
    }

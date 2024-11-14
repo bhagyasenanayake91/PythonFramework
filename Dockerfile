@@ -4,4 +4,4 @@ RUN pip install playwright
 
 RUN playwright install --with-deps
 
-RUN pytest
+# RUN pytest
