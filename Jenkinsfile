@@ -1,5 +1,5 @@
 pipeline {
-   agent { docker { image 'mcr.microsoft.com/playwright/python:latest' } }
+   agent { docker { image 'mcr.microsoft.com/playwright/python:v1.48.0-focal' } }
    // agent { dockerfile true }
    stages {
       stage('e2e-tests') {
