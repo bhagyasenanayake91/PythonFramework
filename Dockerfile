@@ -6,7 +6,7 @@
 
 # # RUN pytest
 
-FROM mcr.microsoft.com/playwright/python:v1.47.0-noble
+FROM mcr.microsoft.com/playwright/python:latest
 
 WORKDIR /app
 
@@ -15,5 +15,5 @@ COPY report /app/report
 COPY tests /app/tests
 COPY utilities /app/utilities
 
-RUN pip install playwright==@1.47.0 && \
+RUN pip install playwright && \
     playwright install --with-deps
