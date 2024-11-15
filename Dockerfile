@@ -7,5 +7,7 @@ FROM mcr.microsoft.com/playwright/python:latest
 # COPY tests /app/tests
 # COPY utilities /app/utilities
 
-RUN pip install playwright && \
-    playwright install --with-deps
+# RUN pip install playwright && \
+#     playwright install --with-deps
+
+# RUN pytest

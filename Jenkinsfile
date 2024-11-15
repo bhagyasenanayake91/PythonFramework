@@ -5,8 +5,8 @@ pipeline {
       stage('e2e-tests') {
          steps {
             // sh 'pip install -r requirements.txt'
-            // sh 'pip install playwright'
-            // sh 'playwright install --with-deps'
+            sh 'pip install playwright'
+            sh 'playwright install --with-deps'
             sh 'pytest'
          }
       }
