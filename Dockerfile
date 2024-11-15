@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright/playwright/python:latest
+FROM mcr.microsoft.com/playwright/python:latest
 
 COPY ./PythonFramework /app/PythonFramework
 WORKDIR /app/PythonFramework
