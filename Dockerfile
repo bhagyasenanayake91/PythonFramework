@@ -9,3 +9,4 @@ COPY utilities /app/utilities
 
 RUN pip install playwright && \
     playwright install --with-deps
+    
