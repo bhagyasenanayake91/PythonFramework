@@ -7,9 +7,9 @@ pipeline {
    agent { dockerfile true }
    stages {
       stage('install') {
-         environment {
-            HOME="."
-         }
+         // environment {
+         //    HOME="."
+         // }
          // steps {
          //    // sh 'pip install -r requirements.txt'
          //    sh '''
@@ -17,7 +17,7 @@ pipeline {
          //       playwright install --with-deps
          //    '''
          // }
-      }
+      // }
       stage('test') {
          steps {
             sh 'echo TEST'
