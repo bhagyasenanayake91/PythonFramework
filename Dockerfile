@@ -1,14 +1,15 @@
-FROM mcr.microsoft.com/playwright/python:latest
+FROM python:3.12-bookworm
 
 # COPY ./PythonFramework /app/PythonFramework
 WORKDIR /app
 
-COPY pages /app/pages
-COPY report /app/report
-COPY tests /app/tests
-COPY utilities /app/utilities
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+RUN playwright install --with-deps
 
-RUN pip install playwright && \
-    playwright install --with-deps
+COPY pages /pages
+COPY report /report
+COPY tests /tests
+COPY utilities /utilities
 
-RUN pytest
+RUN pytest /tests
