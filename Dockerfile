@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/playwright/playwright/python:v1.47.0-noble
 
-COPY ./PythonFramework
-WORKDIR /PythonFramework
+COPY ./PythonFramework /app/PythonFramework
+WORKDIR /app/PythonFramework
 
 # COPY pages /app/pages
 # COPY report /app/report
