@@ -6,7 +6,7 @@ pipeline {
    // }
    agent { dockerfile true }
    stages {
-      stage('install') {
+      // stage('install') {
          // environment {
          //    HOME="."
          // }
