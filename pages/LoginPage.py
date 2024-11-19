@@ -2,22 +2,22 @@ from playwright.sync_api._generated import ElementHandle
 
 from pages.Base import Base
 
-class Login(Base):
+class Login():
     def __init__(self, page):
         self.page = page
-        self.base_url = "https://parabank.parasoft.com/parabank/index.htm"
+        self.base_url = "https://www.saucedemo.com/"
 
     @property
     def  username_field(self):
-            return self.page.locator("input[name=\"username\"]")
+            return self.page.locator('//*[@id="user-name"]')
     
     @property
     def  password_field(self):
-            return self.page.locator("input[name=\"password\"]")
+            return self.page.locator('//*[@id="password"]')
     
     @property
     def  login_button(self):
-            return self.page.get_by_role("button", name="Log In")
+            return self.page.get_by_role("button", name="Login")
 
     def submit_login(self, user):
           self.username_field.fill(user["username"])
